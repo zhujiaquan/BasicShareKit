@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeiboApi.h"
+#import "SinaWeibo.h"
 
-@interface BSViewController : UIViewController
+@interface BSViewController : UIViewController<WeiboRequestDelegate, WeiboAuthDelegate, SinaWeiboDelegate, SinaWeiboRequestDelegate>
+
+@property (nonatomic, retain) WeiboApi *weiboApi;
+@property (nonatomic, retain) SinaWeibo *sinaWeibo;
 
 @end
