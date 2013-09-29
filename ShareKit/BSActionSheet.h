@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
+#import "BasicShareTypeDef.h"
 
 @class BSActionSheetCell;
 
@@ -25,6 +25,7 @@
 
 @end
 
+
 @interface BSActionSheetCell : UIView
 
 @property (nonatomic, retain) UIImageView  *iconView;
@@ -33,8 +34,30 @@
 
 @end
 
-@interface BSWeiboActionSheet : BSActionSheet<BSActionSheetDelegate>
 
-- (id)initWithActionBlock:(void(^)(NSString *buttonTitle))actionBlock;
+typedef void(^BSShareActionSheetActionBlock)(BasicShareType shareType);
+
+@protocol BSShareActionSheetDelegate;
+
+@interface BSShareActionSheet : BSActionSheet<BSActionSheetDelegate>
+{
+    id<BSShareActionSheetDelegate> _shareActionSheetDelegate;
+    BSShareActionSheetActionBlock _actionBlock;
+    NSArray *_shareList;
+}
+
+@property (nonatomic, assign, readonly) id<BSShareActionSheetDelegate> shareActionSheetDelegate;
+@property (nonatomic, copy,   readonly) BSShareActionSheetActionBlock actionBlock;
+@property (nonatomic, retain, readonly) NSArray *shareList;
+
+- (id)initWithShareList:(NSArray *)shareList shareActionSheetDelegate:(id<BSShareActionSheetDelegate>)shareActionSheetDelegate;
+- (id)initWithShareList:(NSArray *)shareList actionBlock:(BSShareActionSheetActionBlock)actionBlock;
 
 @end
+
+@protocol BSShareActionSheetDelegate <NSObject>
+
+- (void)shareActionSheet:(BSShareActionSheet *)shareActionSheet didSelectWithShareType:(BasicShareType)shareType;
+
+@end
+

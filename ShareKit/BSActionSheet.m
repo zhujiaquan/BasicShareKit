@@ -7,9 +7,13 @@
 //
 
 #import "BSActionSheet.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define ITEM_PER_PAGE 6
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface BSActionSheet() <UIScrollViewDelegate>
 
 @property (nonatomic, retain) UIScrollView* scrollView;
@@ -20,6 +24,9 @@
 
 @end
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation BSActionSheet
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -129,12 +136,8 @@
         rowCount = 2;
     }
     
-    
-    
-    
+
     int numberOfPages = (count % ITEM_PER_PAGE == 0) ? count / ITEM_PER_PAGE : count / ITEM_PER_PAGE + 1;
-    NSLog(@"pages = %d", numberOfPages);
-    
     [self.scrollView setContentSize:CGSizeMake(320 * numberOfPages, self.scrollView.frame.size.height)];
     [self.pageControl setNumberOfPages:count/ITEM_PER_PAGE+1];
     [self.pageControl setCurrentPage:0];
@@ -149,9 +152,11 @@
         {
             int row = index / 3;
             int column = index % 3;
-            
+            int numberOfRow = (count < 3) ? count * 2 : 6;
+        
             float centerY = (1 + row * 2) * self.scrollView.frame.size.height / ( 2 * rowCount);
-            float centerX = (1 + column * 2) * self.scrollView.frame.size.width / 6;
+            float centerX = (1 + column * 2) * (self.scrollView.frame.size.width / numberOfRow);
+
             [cell setCenter:CGPointMake(centerX + 320 * pageNo, centerY)];
             [self.scrollView addSubview:cell];
             
@@ -262,14 +267,12 @@
 #pragma mark - BSWeiboActionSheet
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface BSWeiboActionSheet()
-
-@property (nonatomic, copy, readonly) void (^actionBlock)(NSString *buttonTitle);
+@interface BSShareActionSheet()
 
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation BSWeiboActionSheet
+@implementation BSShareActionSheet
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -277,7 +280,9 @@
 #pragma mark Properties
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+@synthesize shareActionSheetDelegate = _shareActionSheetDelegate;
 @synthesize actionBlock = _actionBlock;
+@synthesize shareList = _shareList;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -285,13 +290,29 @@
 #pragma mark Initialization
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)initWithActionBlock:(void(^)(NSString *buttonTitle))aActionBlock
+- (id)initWithShareList:(NSArray *)shareList shareActionSheetDelegate:(id<BSShareActionSheetDelegate>)shareActionSheetDelegate
 {
-    NSParameterAssert(aActionBlock);
-    self = [super initwithIconSheetDelegate:self itemCount:6];
+    self = [super initwithIconSheetDelegate:self itemCount:shareList.count];
     if (self)
     {
-        _actionBlock = [aActionBlock copy];
+        _shareActionSheetDelegate = shareActionSheetDelegate;
+        _actionBlock = nil;
+        _shareList = [shareList retain];
+    }
+    return self;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)initWithShareList:(NSArray *)shareList actionBlock:(BSShareActionSheetActionBlock)actionBlock
+{
+    NSParameterAssert(shareList);
+    NSParameterAssert(actionBlock);
+    self = [super initwithIconSheetDelegate:self itemCount:shareList.count];
+    if (self)
+    {
+        _shareActionSheetDelegate = nil;
+        _actionBlock = [actionBlock copy];
+        _shareList = [shareList retain];
     }
     return self;
 }
@@ -299,8 +320,10 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)dealloc
 {
-    NSLog(@"---> %@ %@", NSStringFromClass([self class]) ,NSStringFromSelector(_cmd));
+    NSLog(@" %@ %@ ", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+    _shareActionSheetDelegate = nil;
     [_actionBlock release];
+    [_shareList release];
     [super dealloc];
 }
 
@@ -312,20 +335,30 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (BSActionSheetCell *)cellForActionAtIndex:(NSInteger)index
 {
+    NSNumber *shareNumber = [self.shareList objectAtIndex:index];
+    
     BSActionSheetCell* cell = [[[BSActionSheetCell alloc] init] autorelease];
-    [cell.iconView setImage:[UIImage imageNamed:@"tencent.png"]];
-    [[cell titleLabel] setText:[NSString stringWithFormat:@"新浪微博"]];
+    [cell.iconView setImage:ShareIconWithType(SHARE_TYPE_FROM_NUMBER(shareNumber))];
+    [cell.titleLabel setText:ShareTitleWithType(SHARE_TYPE_FROM_NUMBER(shareNumber))];
     cell.index = index;
+    
     return cell;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)didTapOnItemAtIndex:(NSInteger)index
 {
-    NSLog(@"tap on %d",index);
+    NSNumber *shareNumber = [self.shareList objectAtIndex:index];
+    
+    if (_shareActionSheetDelegate &&
+        [_shareActionSheetDelegate respondsToSelector:@selector(shareActionSheet:didSelectWithShareType:)])
+    {
+        [_shareActionSheetDelegate shareActionSheet:self didSelectWithShareType:SHARE_TYPE_FROM_NUMBER(shareNumber)];
+    }
+    
     if (_actionBlock)
     {
-        _actionBlock(@"click");
+        _actionBlock(SHARE_TYPE_FROM_NUMBER(shareNumber));
     }
 }
 

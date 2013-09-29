@@ -23,26 +23,31 @@
 		E80DEFA917EFDB5500F370C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E80DEFA817EFDB5500F370C6 /* Default-568h@2x.png */; };
 		E80DEFAC17EFDB5500F370C6 /* BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E80DEFAB17EFDB5500F370C6 /* BSViewController.m */; };
 		E80DEFAF17EFDB5500F370C6 /* BSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80DEFAD17EFDB5500F370C6 /* BSViewController.xib */; };
-		E80DEFBE17EFE00500F370C6 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E80DEFB617EFE00500F370C6 /* libWeiboSDK.a */; };
-		E80DEFBF17EFE00500F370C6 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E80DEFB717EFE00500F370C6 /* WeiboSDK.bundle */; };
 		E80DEFC017EFE00500F370C6 /* libTCWeiboSDK-arm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E80DEFBA17EFE00500F370C6 /* libTCWeiboSDK-arm.a */; };
 		E80DEFC117EFE00500F370C6 /* libTCWeiboSDK-x86.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E80DEFBB17EFE00500F370C6 /* libTCWeiboSDK-x86.a */; };
 		E80DEFC217EFE00500F370C6 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E80DEFBC17EFE00500F370C6 /* libTCWeiboSDK.a */; };
 		E80DEFC417EFE5AC00F370C6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E80DEFC317EFE5AC00F370C6 /* icon.png */; };
-		E80DEFD417F0248E00F370C6 /* WBAuthorize.m in Sources */ = {isa = PBXBuildFile; fileRef = E80DEFC617F0248E00F370C6 /* WBAuthorize.m */; };
-		E80DEFD517F0248E00F370C6 /* WBAuthorizeWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E80DEFC817F0248E00F370C6 /* WBAuthorizeWebView.m */; };
-		E80DEFD617F0248E00F370C6 /* WBEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E80DEFCA17F0248E00F370C6 /* WBEngine.m */; };
-		E80DEFD717F0248E00F370C6 /* WBLogInAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E80DEFCC17F0248E00F370C6 /* WBLogInAlertView.m */; };
-		E80DEFD817F0248E00F370C6 /* WBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E80DEFCE17F0248E00F370C6 /* WBRequest.m */; };
-		E80DEFD917F0248E00F370C6 /* WBSendView.m in Sources */ = {isa = PBXBuildFile; fileRef = E80DEFD117F0248E00F370C6 /* WBSendView.m */; };
-		E80DEFDA17F0248E00F370C6 /* WBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E80DEFD317F0248E00F370C6 /* WBUtil.m */; };
-		E80DEFDE17F024E300F370C6 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E80DEFDD17F024E300F370C6 /* SFHFKeychainUtils.m */; };
-		E80DEFE317F0250300F370C6 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = E80DEFE117F0250300F370C6 /* GTMBase64.m */; };
 		E80DEFE517F0252400F370C6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80DEFE417F0252400F370C6 /* Security.framework */; };
+		E81AD41317F5353100B90756 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = E81AD41117F5353100B90756 /* test.png */; };
+		E81AD41417F5353100B90756 /* test@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E81AD41217F5353100B90756 /* test@2x.png */; };
+		E81AD41717F5526300B90756 /* BSAttachedPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81AD41617F5526300B90756 /* BSAttachedPictureView.m */; };
+		E81AD41A17F55CEC00B90756 /* BSAttachedPictureCtrlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81AD41917F55CEC00B90756 /* BSAttachedPictureCtrlView.m */; };
+		E823AC7C17F4029300D01DEA /* UIView+BasicShareKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E823AC7B17F4029300D01DEA /* UIView+BasicShareKit.m */; };
+		E823AC7F17F4039300D01DEA /* BSCustomButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = E823AC7E17F4039300D01DEA /* BSCustomButtons.m */; };
+		E823AC8317F417BD00D01DEA /* ShareButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E823AC8117F417BD00D01DEA /* ShareButtonBG.png */; };
+		E823AC8417F417BD00D01DEA /* ShareButtonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E823AC8217F417BD00D01DEA /* ShareButtonBG@2x.png */; };
+		E823AC8717F42E9F00D01DEA /* NSString+BasicShareKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E823AC8617F42E9F00D01DEA /* NSString+BasicShareKit.m */; };
+		E823AC9A17F4312E00D01DEA /* UIButton+BasicShareKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E823AC9917F4312D00D01DEA /* UIButton+BasicShareKit.m */; };
+		E823AC9D17F434A200D01DEA /* BSImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E823AC9C17F434A100D01DEA /* BSImagePickerController.m */; };
+		E8E869E717F27C300052CFA3 /* BasicShareKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E8E869E617F27C300052CFA3 /* BasicShareKit.bundle */; };
+		E8E869EB17F27E050052CFA3 /* UIImage+BasicShareKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E869EA17F27E050052CFA3 /* UIImage+BasicShareKit.m */; };
+		E8E869F317F2BBB30052CFA3 /* BSPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E869F217F2BBB30052CFA3 /* BSPlaceHolderTextView.m */; };
+		E8E869F917F2C7580052CFA3 /* BSBaseRebroadcastMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E869F817F2C7580052CFA3 /* BSBaseRebroadcastMsgViewController.m */; };
+		E8E869FC17F2C77F0052CFA3 /* BSSimpleRebroadcastMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E869FB17F2C77F0052CFA3 /* BSSimpleRebroadcastMsgViewController.m */; };
+		E8E869FF17F2C7990052CFA3 /* BSRebroadcastMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E869FE17F2C7990052CFA3 /* BSRebroadcastMsgViewController.m */; };
+		E8EE33BB17F7BE97009A955A /* BasicShareKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EE33BA17F7BE97009A955A /* BasicShareKit.m */; };
 		E8EF4AFD17F17DDF005F10FA /* BSActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EF4AFC17F17DDF005F10FA /* BSActionSheet.m */; };
 		E8EF4AFF17F17E83005F10FA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EF4AFE17F17E83005F10FA /* QuartzCore.framework */; };
-		E8EF4B0417F1902C005F10FA /* tencent.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EF4B0217F1902C005F10FA /* tencent.png */; };
-		E8EF4B0617F1916E005F10FA /* sina_48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EF4B0517F1916E005F10FA /* sina_48x48.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,40 +77,47 @@
 		E80DEFAA17EFDB5500F370C6 /* BSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSViewController.h; sourceTree = "<group>"; };
 		E80DEFAB17EFDB5500F370C6 /* BSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSViewController.m; sourceTree = "<group>"; };
 		E80DEFAE17EFDB5500F370C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BSViewController.xib; sourceTree = "<group>"; };
-		E80DEFB617EFE00500F370C6 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
-		E80DEFB717EFE00500F370C6 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
-		E80DEFB817EFE00500F370C6 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		E80DEFBA17EFE00500F370C6 /* libTCWeiboSDK-arm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libTCWeiboSDK-arm.a"; sourceTree = "<group>"; };
 		E80DEFBB17EFE00500F370C6 /* libTCWeiboSDK-x86.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libTCWeiboSDK-x86.a"; sourceTree = "<group>"; };
 		E80DEFBC17EFE00500F370C6 /* libTCWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTCWeiboSDK.a; sourceTree = "<group>"; };
 		E80DEFBD17EFE00500F370C6 /* WeiboApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApi.h; sourceTree = "<group>"; };
 		E80DEFC317EFE5AC00F370C6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		E80DEFC517F0248E00F370C6 /* WBAuthorize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthorize.h; sourceTree = "<group>"; };
-		E80DEFC617F0248E00F370C6 /* WBAuthorize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthorize.m; sourceTree = "<group>"; };
-		E80DEFC717F0248E00F370C6 /* WBAuthorizeWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthorizeWebView.h; sourceTree = "<group>"; };
-		E80DEFC817F0248E00F370C6 /* WBAuthorizeWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthorizeWebView.m; sourceTree = "<group>"; };
-		E80DEFC917F0248E00F370C6 /* WBEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBEngine.h; sourceTree = "<group>"; };
-		E80DEFCA17F0248E00F370C6 /* WBEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBEngine.m; sourceTree = "<group>"; };
-		E80DEFCB17F0248E00F370C6 /* WBLogInAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBLogInAlertView.h; sourceTree = "<group>"; };
-		E80DEFCC17F0248E00F370C6 /* WBLogInAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBLogInAlertView.m; sourceTree = "<group>"; };
-		E80DEFCD17F0248E00F370C6 /* WBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBRequest.h; sourceTree = "<group>"; };
-		E80DEFCE17F0248E00F370C6 /* WBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBRequest.m; sourceTree = "<group>"; };
-		E80DEFCF17F0248E00F370C6 /* WBSDKGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKGlobal.h; sourceTree = "<group>"; };
-		E80DEFD017F0248E00F370C6 /* WBSendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSendView.h; sourceTree = "<group>"; };
-		E80DEFD117F0248E00F370C6 /* WBSendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSendView.m; sourceTree = "<group>"; };
-		E80DEFD217F0248E00F370C6 /* WBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBUtil.h; sourceTree = "<group>"; };
-		E80DEFD317F0248E00F370C6 /* WBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBUtil.m; sourceTree = "<group>"; };
-		E80DEFDC17F024E300F370C6 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
-		E80DEFDD17F024E300F370C6 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
-		E80DEFE017F0250300F370C6 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
-		E80DEFE117F0250300F370C6 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
-		E80DEFE217F0250300F370C6 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		E80DEFE417F0252400F370C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E81AD41117F5353100B90756 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		E81AD41217F5353100B90756 /* test@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test@2x.png"; sourceTree = "<group>"; };
+		E81AD41517F5526300B90756 /* BSAttachedPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttachedPictureView.h; sourceTree = "<group>"; };
+		E81AD41617F5526300B90756 /* BSAttachedPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttachedPictureView.m; sourceTree = "<group>"; };
+		E81AD41817F55CEC00B90756 /* BSAttachedPictureCtrlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttachedPictureCtrlView.h; sourceTree = "<group>"; };
+		E81AD41917F55CEC00B90756 /* BSAttachedPictureCtrlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttachedPictureCtrlView.m; sourceTree = "<group>"; };
+		E823AC7A17F4029300D01DEA /* UIView+BasicShareKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BasicShareKit.h"; sourceTree = "<group>"; };
+		E823AC7B17F4029300D01DEA /* UIView+BasicShareKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BasicShareKit.m"; sourceTree = "<group>"; };
+		E823AC7D17F4039300D01DEA /* BSCustomButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCustomButtons.h; sourceTree = "<group>"; };
+		E823AC7E17F4039300D01DEA /* BSCustomButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCustomButtons.m; sourceTree = "<group>"; };
+		E823AC8117F417BD00D01DEA /* ShareButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShareButtonBG.png; sourceTree = "<group>"; };
+		E823AC8217F417BD00D01DEA /* ShareButtonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShareButtonBG@2x.png"; sourceTree = "<group>"; };
+		E823AC8517F42E9F00D01DEA /* NSString+BasicShareKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BasicShareKit.h"; sourceTree = "<group>"; };
+		E823AC8617F42E9F00D01DEA /* NSString+BasicShareKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BasicShareKit.m"; sourceTree = "<group>"; };
+		E823AC9817F4312D00D01DEA /* UIButton+BasicShareKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BasicShareKit.h"; sourceTree = "<group>"; };
+		E823AC9917F4312D00D01DEA /* UIButton+BasicShareKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BasicShareKit.m"; sourceTree = "<group>"; };
+		E823AC9B17F434A100D01DEA /* BSImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSImagePickerController.h; sourceTree = "<group>"; };
+		E823AC9C17F434A100D01DEA /* BSImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSImagePickerController.m; sourceTree = "<group>"; };
+		E8E869E617F27C300052CFA3 /* BasicShareKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BasicShareKit.bundle; sourceTree = "<group>"; };
+		E8E869E917F27E050052CFA3 /* UIImage+BasicShareKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BasicShareKit.h"; sourceTree = "<group>"; };
+		E8E869EA17F27E050052CFA3 /* UIImage+BasicShareKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BasicShareKit.m"; sourceTree = "<group>"; };
+		E8E869EF17F2890C0052CFA3 /* BasicShareKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicShareKit.h; sourceTree = "<group>"; };
+		E8E869F017F28A320052CFA3 /* BasicShareTypeDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicShareTypeDef.h; sourceTree = "<group>"; };
+		E8E869F117F2BBB30052CFA3 /* BSPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPlaceHolderTextView.h; sourceTree = "<group>"; };
+		E8E869F217F2BBB30052CFA3 /* BSPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlaceHolderTextView.m; sourceTree = "<group>"; };
+		E8E869F717F2C7570052CFA3 /* BSBaseRebroadcastMsgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBaseRebroadcastMsgViewController.h; sourceTree = "<group>"; };
+		E8E869F817F2C7580052CFA3 /* BSBaseRebroadcastMsgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBaseRebroadcastMsgViewController.m; sourceTree = "<group>"; };
+		E8E869FA17F2C77E0052CFA3 /* BSSimpleRebroadcastMsgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSimpleRebroadcastMsgViewController.h; sourceTree = "<group>"; };
+		E8E869FB17F2C77F0052CFA3 /* BSSimpleRebroadcastMsgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSimpleRebroadcastMsgViewController.m; sourceTree = "<group>"; };
+		E8E869FD17F2C7990052CFA3 /* BSRebroadcastMsgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRebroadcastMsgViewController.h; sourceTree = "<group>"; };
+		E8E869FE17F2C7990052CFA3 /* BSRebroadcastMsgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRebroadcastMsgViewController.m; sourceTree = "<group>"; };
+		E8EE33BA17F7BE97009A955A /* BasicShareKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicShareKit.m; sourceTree = "<group>"; };
 		E8EF4AFB17F17DDF005F10FA /* BSActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSActionSheet.h; sourceTree = "<group>"; };
 		E8EF4AFC17F17DDF005F10FA /* BSActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSActionSheet.m; sourceTree = "<group>"; };
 		E8EF4AFE17F17E83005F10FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		E8EF4B0217F1902C005F10FA /* tencent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tencent.png; sourceTree = "<group>"; };
-		E8EF4B0517F1916E005F10FA /* sina_48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sina_48x48.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +130,6 @@
 				E80DEF9317EFDB5500F370C6 /* UIKit.framework in Frameworks */,
 				E80DEF9517EFDB5500F370C6 /* Foundation.framework in Frameworks */,
 				E80DEF9717EFDB5500F370C6 /* CoreGraphics.framework in Frameworks */,
-				E80DEFBE17EFE00500F370C6 /* libWeiboSDK.a in Frameworks */,
 				E80DEFC017EFE00500F370C6 /* libTCWeiboSDK-arm.a in Frameworks */,
 				E80DEFC117EFE00500F370C6 /* libTCWeiboSDK-x86.a in Frameworks */,
 				E80DEFC217EFE00500F370C6 /* libTCWeiboSDK.a in Frameworks */,
@@ -155,13 +166,11 @@
 		E80DEF8617EFDB5500F370C6 = {
 			isa = PBXGroup;
 			children = (
+				E823AC8017F417BD00D01DEA /* Resources */,
 				E8EF4AFA17F17D8E005F10FA /* ShareKit */,
 				E808DF8817F1582F00545730 /* JSONKit */,
 				E808DF7B17F13F4F00545730 /* SinaWeibo */,
-				E80DEFDF17F0250300F370C6 /* CTMBase64 */,
-				E80DEFDB17F024E200F370C6 /* SFHFKeychainUtils */,
 				E80DEFC317EFE5AC00F370C6 /* icon.png */,
-				E80DEFB517EFE00500F370C6 /* SinaWeiboSDK */,
 				E80DEFB917EFE00500F370C6 /* TCWeiboSDK */,
 				E80DEF9817EFDB5500F370C6 /* BasicShareKit */,
 				E80DEF9117EFDB5500F370C6 /* Frameworks */,
@@ -216,31 +225,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E80DEFB517EFE00500F370C6 /* SinaWeiboSDK */ = {
-			isa = PBXGroup;
-			children = (
-				E80DEFC517F0248E00F370C6 /* WBAuthorize.h */,
-				E80DEFC617F0248E00F370C6 /* WBAuthorize.m */,
-				E80DEFC717F0248E00F370C6 /* WBAuthorizeWebView.h */,
-				E80DEFC817F0248E00F370C6 /* WBAuthorizeWebView.m */,
-				E80DEFC917F0248E00F370C6 /* WBEngine.h */,
-				E80DEFCA17F0248E00F370C6 /* WBEngine.m */,
-				E80DEFCB17F0248E00F370C6 /* WBLogInAlertView.h */,
-				E80DEFCC17F0248E00F370C6 /* WBLogInAlertView.m */,
-				E80DEFCD17F0248E00F370C6 /* WBRequest.h */,
-				E80DEFCE17F0248E00F370C6 /* WBRequest.m */,
-				E80DEFCF17F0248E00F370C6 /* WBSDKGlobal.h */,
-				E80DEFD017F0248E00F370C6 /* WBSendView.h */,
-				E80DEFD117F0248E00F370C6 /* WBSendView.m */,
-				E80DEFD217F0248E00F370C6 /* WBUtil.h */,
-				E80DEFD317F0248E00F370C6 /* WBUtil.m */,
-				E80DEFB617EFE00500F370C6 /* libWeiboSDK.a */,
-				E80DEFB717EFE00500F370C6 /* WeiboSDK.bundle */,
-				E80DEFB817EFE00500F370C6 /* WeiboSDK.h */,
-			);
-			path = SinaWeiboSDK;
-			sourceTree = "<group>";
-		};
 		E80DEFB917EFE00500F370C6 /* TCWeiboSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,42 +236,52 @@
 			path = TCWeiboSDK;
 			sourceTree = "<group>";
 		};
-		E80DEFDB17F024E200F370C6 /* SFHFKeychainUtils */ = {
+		E823AC8017F417BD00D01DEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E80DEFDC17F024E300F370C6 /* SFHFKeychainUtils.h */,
-				E80DEFDD17F024E300F370C6 /* SFHFKeychainUtils.m */,
+				E81AD41117F5353100B90756 /* test.png */,
+				E81AD41217F5353100B90756 /* test@2x.png */,
+				E823AC8117F417BD00D01DEA /* ShareButtonBG.png */,
+				E823AC8217F417BD00D01DEA /* ShareButtonBG@2x.png */,
 			);
-			path = SFHFKeychainUtils;
-			sourceTree = "<group>";
-		};
-		E80DEFDF17F0250300F370C6 /* CTMBase64 */ = {
-			isa = PBXGroup;
-			children = (
-				E80DEFE017F0250300F370C6 /* GTMBase64.h */,
-				E80DEFE117F0250300F370C6 /* GTMBase64.m */,
-				E80DEFE217F0250300F370C6 /* GTMDefines.h */,
-			);
-			path = CTMBase64;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E8EF4AFA17F17D8E005F10FA /* ShareKit */ = {
 			isa = PBXGroup;
 			children = (
-				E8EF4B0017F1902C005F10FA /* Resources */,
+				E8E869E617F27C300052CFA3 /* BasicShareKit.bundle */,
 				E8EF4AFB17F17DDF005F10FA /* BSActionSheet.h */,
 				E8EF4AFC17F17DDF005F10FA /* BSActionSheet.m */,
+				E8E869F117F2BBB30052CFA3 /* BSPlaceHolderTextView.h */,
+				E8E869F217F2BBB30052CFA3 /* BSPlaceHolderTextView.m */,
+				E8E869EF17F2890C0052CFA3 /* BasicShareKit.h */,
+				E8EE33BA17F7BE97009A955A /* BasicShareKit.m */,
+				E8E869F017F28A320052CFA3 /* BasicShareTypeDef.h */,
+				E8E869F717F2C7570052CFA3 /* BSBaseRebroadcastMsgViewController.h */,
+				E8E869F817F2C7580052CFA3 /* BSBaseRebroadcastMsgViewController.m */,
+				E8E869FA17F2C77E0052CFA3 /* BSSimpleRebroadcastMsgViewController.h */,
+				E8E869FB17F2C77F0052CFA3 /* BSSimpleRebroadcastMsgViewController.m */,
+				E8E869FD17F2C7990052CFA3 /* BSRebroadcastMsgViewController.h */,
+				E8E869FE17F2C7990052CFA3 /* BSRebroadcastMsgViewController.m */,
+				E823AC7D17F4039300D01DEA /* BSCustomButtons.h */,
+				E823AC7E17F4039300D01DEA /* BSCustomButtons.m */,
+				E823AC9B17F434A100D01DEA /* BSImagePickerController.h */,
+				E823AC9C17F434A100D01DEA /* BSImagePickerController.m */,
+				E81AD41517F5526300B90756 /* BSAttachedPictureView.h */,
+				E81AD41617F5526300B90756 /* BSAttachedPictureView.m */,
+				E81AD41817F55CEC00B90756 /* BSAttachedPictureCtrlView.h */,
+				E81AD41917F55CEC00B90756 /* BSAttachedPictureCtrlView.m */,
+				E8E869E917F27E050052CFA3 /* UIImage+BasicShareKit.h */,
+				E8E869EA17F27E050052CFA3 /* UIImage+BasicShareKit.m */,
+				E823AC7A17F4029300D01DEA /* UIView+BasicShareKit.h */,
+				E823AC7B17F4029300D01DEA /* UIView+BasicShareKit.m */,
+				E823AC8517F42E9F00D01DEA /* NSString+BasicShareKit.h */,
+				E823AC8617F42E9F00D01DEA /* NSString+BasicShareKit.m */,
+				E823AC9817F4312D00D01DEA /* UIButton+BasicShareKit.h */,
+				E823AC9917F4312D00D01DEA /* UIButton+BasicShareKit.m */,
 			);
 			path = ShareKit;
-			sourceTree = "<group>";
-		};
-		E8EF4B0017F1902C005F10FA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF4B0517F1916E005F10FA /* sina_48x48.png */,
-				E8EF4B0217F1902C005F10FA /* tencent.png */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,11 +341,13 @@
 				E80DEFA717EFDB5500F370C6 /* Default@2x.png in Resources */,
 				E80DEFA917EFDB5500F370C6 /* Default-568h@2x.png in Resources */,
 				E80DEFAF17EFDB5500F370C6 /* BSViewController.xib in Resources */,
-				E80DEFBF17EFE00500F370C6 /* WeiboSDK.bundle in Resources */,
 				E80DEFC417EFE5AC00F370C6 /* icon.png in Resources */,
 				E808DF8417F13F4F00545730 /* SinaWeibo.bundle in Resources */,
-				E8EF4B0417F1902C005F10FA /* tencent.png in Resources */,
-				E8EF4B0617F1916E005F10FA /* sina_48x48.png in Resources */,
+				E8E869E717F27C300052CFA3 /* BasicShareKit.bundle in Resources */,
+				E823AC8317F417BD00D01DEA /* ShareButtonBG.png in Resources */,
+				E823AC8417F417BD00D01DEA /* ShareButtonBG@2x.png in Resources */,
+				E81AD41317F5353100B90756 /* test.png in Resources */,
+				E81AD41417F5353100B90756 /* test@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,20 +361,24 @@
 				E80DEF9F17EFDB5500F370C6 /* main.m in Sources */,
 				E80DEFA317EFDB5500F370C6 /* BSAppDelegate.m in Sources */,
 				E80DEFAC17EFDB5500F370C6 /* BSViewController.m in Sources */,
-				E80DEFD417F0248E00F370C6 /* WBAuthorize.m in Sources */,
-				E80DEFD517F0248E00F370C6 /* WBAuthorizeWebView.m in Sources */,
-				E80DEFD617F0248E00F370C6 /* WBEngine.m in Sources */,
-				E80DEFD717F0248E00F370C6 /* WBLogInAlertView.m in Sources */,
-				E80DEFD817F0248E00F370C6 /* WBRequest.m in Sources */,
-				E80DEFD917F0248E00F370C6 /* WBSendView.m in Sources */,
-				E80DEFDA17F0248E00F370C6 /* WBUtil.m in Sources */,
-				E80DEFDE17F024E300F370C6 /* SFHFKeychainUtils.m in Sources */,
-				E80DEFE317F0250300F370C6 /* GTMBase64.m in Sources */,
 				E808DF8517F13F4F00545730 /* SinaWeibo.m in Sources */,
 				E808DF8617F13F4F00545730 /* SinaWeiboAuthorizeView.m in Sources */,
 				E808DF8717F13F4F00545730 /* SinaWeiboRequest.m in Sources */,
 				E808DF8B17F1582F00545730 /* JSONKit.m in Sources */,
 				E8EF4AFD17F17DDF005F10FA /* BSActionSheet.m in Sources */,
+				E8E869EB17F27E050052CFA3 /* UIImage+BasicShareKit.m in Sources */,
+				E8E869F317F2BBB30052CFA3 /* BSPlaceHolderTextView.m in Sources */,
+				E8E869F917F2C7580052CFA3 /* BSBaseRebroadcastMsgViewController.m in Sources */,
+				E8E869FC17F2C77F0052CFA3 /* BSSimpleRebroadcastMsgViewController.m in Sources */,
+				E8E869FF17F2C7990052CFA3 /* BSRebroadcastMsgViewController.m in Sources */,
+				E823AC7C17F4029300D01DEA /* UIView+BasicShareKit.m in Sources */,
+				E823AC7F17F4039300D01DEA /* BSCustomButtons.m in Sources */,
+				E823AC8717F42E9F00D01DEA /* NSString+BasicShareKit.m in Sources */,
+				E823AC9A17F4312E00D01DEA /* UIButton+BasicShareKit.m in Sources */,
+				E823AC9D17F434A200D01DEA /* BSImagePickerController.m in Sources */,
+				E81AD41717F5526300B90756 /* BSAttachedPictureView.m in Sources */,
+				E81AD41A17F55CEC00B90756 /* BSAttachedPictureCtrlView.m in Sources */,
+				E8EE33BB17F7BE97009A955A /* BasicShareKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

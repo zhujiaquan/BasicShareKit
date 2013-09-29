@@ -1,0 +1,109 @@
+//
+//  BSImagePickerController.m
+//  BasicShareKit
+//
+//  Created by ZhuJiaQuan on 13-9-26.
+//  Copyright (c) 2013年 5codelab. All rights reserved.
+//
+
+#import "BSImagePickerController.h"
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@interface BSImagePickerController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+@property (nonatomic, copy, readonly) void (^photoCaptureSelectionBlock)(UIImage *photo);
+@property (nonatomic, copy, readonly) void (^photoLibrarySelectionBlock)(UIImage *photo);
+@property (nonatomic, copy, readonly) void (^cancelBlock)(void);
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@implementation BSImagePickerController
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Properties
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@synthesize photoCaptureSelectionBlock = _photoCaptureSelectionBlock;
+@synthesize photoLibrarySelectionBlock = _photoLibrarySelectionBlock;
+@synthesize cancelBlock                = _cancelBlock;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Initialization
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)initWithPhotoCaptureSelectionBlock:(void(^)(UIImage *photo))photoCaptureSelectionBlock
+                             cancelBlock:(void(^)(void))cancelBlock
+{
+    self = [super init];
+    if (self)
+    {
+        self.delegate = self;
+        self.sourceType = UIImagePickerControllerSourceTypeCamera;
+        _photoCaptureSelectionBlock = [photoCaptureSelectionBlock copy];
+        _cancelBlock = [cancelBlock copy];
+    }
+    return self;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)initWithPhotoLibrarySelectionBlock:(void(^)(UIImage *photo))photoLibrarySelectionBlock
+                             cancelBlock:(void(^)(void))cancelBlock
+{
+    self = [super init];
+    if (self)
+    {
+        self.delegate = self;
+        self.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        _photoLibrarySelectionBlock = [photoLibrarySelectionBlock copy];
+        _cancelBlock = [cancelBlock copy];
+    }
+    return self;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)dealloc
+{
+    [_photoCaptureSelectionBlock release];
+    [_photoLibrarySelectionBlock release];
+    [_cancelBlock release];
+    [super dealloc];
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark UIImagePickerDelegate
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    if (self.cancelBlock)
+    {
+        self.cancelBlock();
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    if (self.photoCaptureSelectionBlock)
+    {
+        self.photoCaptureSelectionBlock(image);
+    }
+    if (self.photoLibrarySelectionBlock)
+    {
+        self.photoLibrarySelectionBlock(image);
+    }
+}
+
+@end

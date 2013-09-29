@@ -383,8 +383,8 @@ typedef enum{
  * @protocol   WeiboRequestDelegate
  * @brief   腾讯微博接口回调协议
  */
-
 @protocol WeiboRequestDelegate <NSObject>
+
 @optional
 /**
  * @brief   接口调用成功后的回调
@@ -393,6 +393,7 @@ typedef enum{
  * @return  无返回
  */
 - (void)didReceiveRawData:(NSData *)data reqNo:(int)reqno;
+
 /**
  * @brief   接口调用失败后的回调
  * @param   INPUT   error   接口返回的错误信息
@@ -400,6 +401,7 @@ typedef enum{
  * @return  无返回
  */
 - (void)didFailWithError:(NSError *)error reqNo:(int)reqno;
+
 @end
 
 
