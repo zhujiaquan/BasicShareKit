@@ -20,6 +20,19 @@
 @end
 
 @interface BSActionSheet : UIActionSheet
+{
+    UIScrollView *_scrollView;
+    UIPageControl *_pageControl;
+    NSMutableArray *_items;
+    id<BSActionSheetDelegate> _actionSheetDelegate;
+    NSInteger _numberOfItems;
+}
+
+@property (nonatomic, retain) UIScrollView* scrollView;
+@property (nonatomic, retain) UIPageControl* pageControl;
+@property (nonatomic, retain) NSMutableArray* items;
+@property (nonatomic, assign) id<BSActionSheetDelegate> actionSheetDelegate;
+@property (nonatomic, assign) NSInteger numberOfItems;
 
 - (id)initwithIconSheetDelegate:(id<BSActionSheetDelegate>)delegate itemCount:(int)count;
 
@@ -27,6 +40,11 @@
 
 
 @interface BSActionSheetCell : UIView
+{
+    UIImageView *_iconView;
+    UILabel *_titleLabel;
+    int _index;
+}
 
 @property (nonatomic, retain) UIImageView  *iconView;
 @property (nonatomic, retain) UILabel      *titleLabel;

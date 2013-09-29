@@ -16,12 +16,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface BSActionSheet() <UIScrollViewDelegate>
 
-@property (nonatomic, retain) UIScrollView* scrollView;
-@property (nonatomic, retain) UIPageControl* pageControl;
-@property (nonatomic, retain) NSMutableArray* items;
-@property (nonatomic, assign) id<BSActionSheetDelegate> actionSheetDelegate;
-@property (nonatomic, assign) NSInteger numberOfItems;
-
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -340,7 +334,7 @@
     BSActionSheetCell* cell = [[[BSActionSheetCell alloc] init] autorelease];
     [cell.iconView setImage:ShareIconWithType(SHARE_TYPE_FROM_NUMBER(shareNumber))];
     [cell.titleLabel setText:ShareTitleWithType(SHARE_TYPE_FROM_NUMBER(shareNumber))];
-    cell.index = index;
+    [cell setIndex:index];
     
     return cell;
 }

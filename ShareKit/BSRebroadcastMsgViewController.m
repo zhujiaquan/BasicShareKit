@@ -60,6 +60,19 @@ static NSInteger kMaxWords = 140;
 #pragma mark Setter methods
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)setTextReadyPost:(NSString *)textReadyPost
+{
+    if (![textReadyPost isEqual:_textReadyPost])
+    {
+        if (_textReadyPost)
+        {
+            [_textReadyPost release], _textReadyPost = nil;
+        }
+        _textReadyPost = [textReadyPost retain];
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setImageReadyPost:(UIImage *)imageReadyPost
 {
     if (![imageReadyPost isEqual:_imageReadyPost])
@@ -120,7 +133,7 @@ static NSInteger kMaxWords = 140;
         _keyBoardHeight = 216.0f;
         _imageReadyPost = nil;
     
-        _textReadyPost = [textReadyPost retain];
+        self.textReadyPost  = textReadyPost;
         self.imageReadyPost = imageReadyPost;
     }
     return self;
@@ -141,7 +154,7 @@ static NSInteger kMaxWords = 140;
         _keyBoardHeight = 216.0f;
         _imageReadyPost = nil;
     
-        _textReadyPost = [textReadyPost retain];
+        self.textReadyPost  = textReadyPost;
         self.imageReadyPost = imageReadyPost;
     }
     return self;
@@ -419,6 +432,31 @@ static NSInteger kMaxWords = 140;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)hasTextReadyPost
+{
+    NSString *text = [self.editorTextView.text trimmedString];
+    if (text.length && text.length <= kMaxWords)
+    {
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    }
+    else
+    {
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    }
+    
+    NSString *total = [NSString stringWithFormat:@"%d", kMaxWords - text.length];
+    if ((NSInteger)(kMaxWords - text.length) >= 0)
+    {
+        [self.totalLabel setTextColor:[UIColor blackColor]];
+    }
+    else
+    {
+        [self.totalLabel setTextColor:[UIColor redColor]];
+    }
+    [self.totalLabel setText:total];
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark Responding to keyboard events
@@ -490,32 +528,13 @@ static NSInteger kMaxWords = 140;
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)textViewDidChange:(UITextView *)textView
 {
-    NSString *text = [self.editorTextView.text trimmedString];
-    if (text.length && text.length <= kMaxWords)
-    {
-        self.navigationItem.rightBarButtonItem.enabled = YES;
-    }
-    else
-    {
-        self.navigationItem.rightBarButtonItem.enabled = NO;
-    }
-    
-    NSString *total = [NSString stringWithFormat:@"%d", kMaxWords - text.length];    
-    if ((NSInteger)(kMaxWords - text.length) >= 0)
-    {
-        [self.totalLabel setTextColor:[UIColor blackColor]];
-    }
-    else
-    {
-        [self.totalLabel setTextColor:[UIColor redColor]];
-    }
-    [self.totalLabel setText:total];
+    [self hasTextReadyPost];
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
- 
+    [self hasTextReadyPost];
 }
  
 ///////////////////////////////////////////////////////////////////////////////////////////////////

@@ -17,8 +17,8 @@
     UIView *_viewDownContainer;
     BSAttachedPictureView *_attachedImageView;
     BSAttachedPictureCtrlView *_attachedPictureCtrlView;
-    UIImage *_imageReadyPost;
     NSString *_textReadyPost;
+    UIImage  *_imageReadyPost;
 }
 
 @property (nonatomic, retain) BSPlaceHolderTextView *editorTextView;
@@ -27,7 +27,8 @@
 @property (nonatomic, retain) UIButton    *pictureButton;
 @property (nonatomic, retain) UILabel     *totalLabel;
 
-@property (nonatomic, retain) UIImage  *imageReadyPost;
 @property (nonatomic, retain) NSString *textReadyPost;
+@property (nonatomic, retain) UIImage  *imageReadyPost;
+
 
 @end
