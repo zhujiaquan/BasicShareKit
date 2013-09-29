@@ -13,9 +13,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface BSImagePickerController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-@property (nonatomic, copy, readonly) void (^photoCaptureSelectionBlock)(UIImage *photo);
-@property (nonatomic, copy, readonly) void (^photoLibrarySelectionBlock)(UIImage *photo);
-@property (nonatomic, copy, readonly) void (^cancelBlock)(void);
 
 @end
 
@@ -40,8 +37,8 @@
 #pragma mark Initialization
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)initWithPhotoCaptureSelectionBlock:(void(^)(UIImage *photo))photoCaptureSelectionBlock
-                             cancelBlock:(void(^)(void))cancelBlock
+- (id)initWithPhotoCaptureSelectionBlock:(BSImagePickerControllerPhotoCaptureSelectionBlock)photoCaptureSelectionBlock
+                             cancelBlock:(BSImagePickerControllerCancelBlock)cancelBlock
 {
     self = [super init];
     if (self)
@@ -55,8 +52,8 @@
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)initWithPhotoLibrarySelectionBlock:(void(^)(UIImage *photo))photoLibrarySelectionBlock
-                             cancelBlock:(void(^)(void))cancelBlock
+- (id)initWithPhotoLibrarySelectionBlock:(BSImagePickerControllerPhotoLibrarySelectionBlock)photoLibrarySelectionBlock
+                             cancelBlock:(BSImagePickerControllerCancelBlock)cancelBlock
 {
     self = [super init];
     if (self)

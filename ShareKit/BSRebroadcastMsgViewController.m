@@ -361,39 +361,61 @@ static NSInteger kMaxWords = 140;
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (IBAction)cameraButtonTouchUpInside:(id)sender
 {
-    __block BSRebroadcastMsgViewController *weakSelf = self;
-    __block BSImagePickerController *weakPicker = [[[BSImagePickerController alloc] initWithPhotoLibrarySelectionBlock:^(UIImage *photo) {
+    if ([BSImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        __block BSRebroadcastMsgViewController *weakSelf = self;
+        __block BSImagePickerController *weakPicker = [[[BSImagePickerController alloc] initWithPhotoCaptureSelectionBlock:^(UIImage *photo) {
         
-        [weakSelf setImageReadyPost:photo];
-        [weakPicker dismissModalViewControllerAnimated:YES];
+            [weakSelf setImageReadyPost:photo];
+            [weakPicker dismissModalViewControllerAnimated:YES];
         
-    } cancelBlock:^{
+        } cancelBlock:^{
         
-        [weakSelf setImageReadyPost:[UIImage imageNamed:@"test"]];
-        [weakPicker dismissModalViewControllerAnimated:YES];
+            [weakSelf setImageReadyPost:[UIImage imageNamed:@"test"]];
+            [weakPicker dismissModalViewControllerAnimated:YES];
         
-    }] autorelease];
+        }] autorelease];
     
-    [weakSelf presentModalViewController:weakPicker animated:YES];
+        [weakSelf presentModalViewController:weakPicker animated:YES];
+    }
+    else
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"提示"
+                                    message:@"该设备无法使用照相机设备"
+                                   delegate:self
+                          cancelButtonTitle:@"确定"
+                          otherButtonTitles:nil] autorelease] show];
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (IBAction)pictureButtonTouchUpInside:(id)sender
 {
-    __block BSRebroadcastMsgViewController *weakSelf = self;
-    __block BSImagePickerController *weakPicker = [[[BSImagePickerController alloc] initWithPhotoLibrarySelectionBlock:^(UIImage *photo) {
+    if ([BSImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
+    {
+        __block BSRebroadcastMsgViewController *weakSelf = self;
+        __block BSImagePickerController *weakPicker = [[[BSImagePickerController alloc] initWithPhotoLibrarySelectionBlock:^(UIImage *photo) {
+            
+            [weakSelf setImageReadyPost:photo];
+            [weakPicker dismissModalViewControllerAnimated:YES];
+            
+        } cancelBlock:^{
+            
+            [weakSelf setImageReadyPost:[UIImage imageNamed:@"test"]];
+            [weakPicker dismissModalViewControllerAnimated:YES];
+            
+        }] autorelease];
         
-        [weakSelf setImageReadyPost:photo];
-        [weakPicker dismissModalViewControllerAnimated:YES];
-        
-    } cancelBlock:^{
-        
-        [weakSelf setImageReadyPost:[UIImage imageNamed:@"test"]];
-        [weakPicker dismissModalViewControllerAnimated:YES];
-        
-    }] autorelease];
-    
-    [weakSelf presentModalViewController:weakPicker animated:YES];
+        [weakSelf presentModalViewController:weakPicker animated:YES];
+    }
+    else
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"提示"
+                                     message:@"该设备无法选取相册照片"
+                                    delegate:self
+                           cancelButtonTitle:@"确定"
+                           otherButtonTitles:nil] autorelease] show];
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

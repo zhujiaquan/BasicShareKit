@@ -8,12 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^BSImagePickerControllerPhotoCaptureSelectionBlock)(UIImage *photo);
+typedef void(^BSImagePickerControllerPhotoLibrarySelectionBlock)(UIImage *photo);
+typedef void(^BSImagePickerControllerCancelBlock)(void);
+
 @interface BSImagePickerController : UIImagePickerController
+{
+    BSImagePickerControllerPhotoCaptureSelectionBlock _photoCaptureSelectionBlock;
+    BSImagePickerControllerPhotoLibrarySelectionBlock _photoLibrarySelectionBlock;
+    BSImagePickerControllerCancelBlock _cancelBlock;
+}
 
-- (id)initWithPhotoCaptureSelectionBlock:(void(^)(UIImage *photo))photoCaptureSelectionBlock
-                             cancelBlock:(void(^)(void))cancelBlock;
+@property (nonatomic, copy, readonly) BSImagePickerControllerPhotoCaptureSelectionBlock photoCaptureSelectionBlock;
+@property (nonatomic, copy, readonly) BSImagePickerControllerPhotoLibrarySelectionBlock photoLibrarySelectionBlock;
+@property (nonatomic, copy, readonly) BSImagePickerControllerCancelBlock cancelBlock;
 
-- (id)initWithPhotoLibrarySelectionBlock:(void(^)(UIImage *photo))photoLibrarySelectionBlock
-                             cancelBlock:(void(^)(void))cancelBlock;
+- (id)initWithPhotoCaptureSelectionBlock:(BSImagePickerControllerPhotoCaptureSelectionBlock)photoCaptureSelectionBlock
+                             cancelBlock:(BSImagePickerControllerCancelBlock)cancelBlock;
+
+- (id)initWithPhotoLibrarySelectionBlock:(BSImagePickerControllerPhotoLibrarySelectionBlock)photoLibrarySelectionBlock
+                             cancelBlock:(BSImagePickerControllerCancelBlock)cancelBlock;
 
 @end
